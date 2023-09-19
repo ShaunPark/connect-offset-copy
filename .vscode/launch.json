@@ -1,0 +1,48 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}",
+            "args": ["-c", "/Users/spark/test/connect-offset-copy/app/src/main/resources/server.properties", "-o", "connect-offsets", "-l"]
+
+        },
+        {
+            "type": "java",
+            "name": "App-ERROR",
+            "request": "launch",
+            "mainClass": "com.shaunpark.kafka.connect.App",
+            "projectName": "app",
+            "args": ["-p", "/Users/spark/test/connect-offset-copy/app/src/main/resources/server.properties", "-o", "connect-offsets"]
+        },
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "com.shaunpark.kafka.connect.App",
+            "projectName": "app",
+            "args": ["-p", "/Users/spark/test/connect-offset-copy/app/src/main/resources/server.properties", "-o", "connect-offsets", "-l"]
+        },
+        {
+            "type": "java",
+            "name": "APP-GET",
+            "request": "launch",
+            "mainClass": "com.shaunpark.kafka.connect.App",
+            "projectName": "app",
+            "args": ["-p", "/Users/spark/test/connect-offset-copy/app/src/main/resources/server.properties", "-o", "connect-offsets", "-g", "CDC_ORG"]
+        },
+        {
+            "type": "java",
+            "name": "APP-COPY",
+            "request": "launch",
+            "mainClass": "com.shaunpark.kafka.connect.App",
+            "projectName": "app",
+            "args": ["-p", "/Users/spark/test/connect-offset-copy/app/src/main/resources/server.properties", "-o", "connect-offsets", "-c", "[\"CDC_ORG\",{\"server\":\"test1\"}]", "-t", "[\"CDC_ORG_2\",{\"server\":\"test1\"}]"]
+        }
+    ]
+}
